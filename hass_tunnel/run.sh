@@ -14,6 +14,7 @@ LOCAL_FORWARDING=$(jq --raw-output ".local_forwarding[]" $CONFIG_PATH)
 
 OTHER_SSH_OPTIONS=$(jq --raw-output ".other_ssh_options" $CONFIG_PATH)
 MONITOR_PORT=$(jq --raw-output ".monitor_port" $CONFIG_PATH)
+TIMEOUT_HOURS=$(jq --raw-output ".timeout_hours" $CONFIG_PATH)
 
 echo "[DEBUG] Start"
 
