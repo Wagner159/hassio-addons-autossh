@@ -1,6 +1,6 @@
 {
   "name": "Autossh with timeout",
-  "version": "0.3.1",
+  "version": "0.3.0",
   "slug": "autossh",
   "description": "Automatically connect to a ssh server for forwarding ports",
   "url": "https://github.com/Wagner159/hassio-addons-autossh",
