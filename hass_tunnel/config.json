@@ -3,7 +3,7 @@
   "version": "0.3.0",
   "slug": "autossh",
   "description": "Automatically connect to a ssh server for forwarding ports",
-  "url": "https://github.com/pjcarly/hassio-addons",
+  "url": "https://github.com/Wagner159/hassio-addons-autossh",
   "arch": ["armv7", "armhf", "amd64", "aarch64", "i386"],
   "startup": "application",
   "boot": "auto",
