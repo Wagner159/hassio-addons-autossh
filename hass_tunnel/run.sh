@@ -16,7 +16,7 @@ OTHER_SSH_OPTIONS=$(jq --raw-output ".other_ssh_options" $CONFIG_PATH)
 MONITOR_PORT=$(jq --raw-output ".monitor_port" $CONFIG_PATH)
 TIMEOUT_HOURS=$(jq --raw-output ".timeout_hours" $CONFIG_PATH)
 
-echo "[DEBUG] Start"
+echo "[INFO] Start"
 
 # Generate key
 if [ ! -d "$KEY_PATH" ]; then
@@ -55,4 +55,6 @@ command_args="${command_args} ${OTHER_SSH_OPTIONS}"
 
 echo "[INFO] command args: ${command_args}"
 # start autossh
-/usr/bin/autossh ${command_args}
+timeout -s SIGUSR1 ${TIMEOUT_HOURS}h /usr/bin/autossh ${command_args}
+
+echo "[INFO] End"
